@@ -1,0 +1,60 @@
+<!doctype html>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+  $.get('infograafi_eng.svg', function(data) {
+    $(document.body).append(data.documentElement);
+    init();
+  });
+  function init() {
+   $('#Lehti1').click(function() {
+  $('#Dialog1').fadeIn();
+});
+$('#Close1').click(function() {
+  $('#Dialog1').hide();
+});
+$('#Next1').click(function() {
+  $('#Dialog1').hide();
+  $('#Dialog2').fadeIn();
+});
+   $('#Lehti2').click(function() {
+  $('#Dialog2').fadeIn();
+});
+$('#Close2').click(function() {
+  $('#Dialog2').hide();
+});
+$('#Next2').click(function() {
+  $('#Dialog2').hide();
+  $('#Dialog3').fadeIn();
+});
+   $('#Lehti3').click(function() {
+  $('#Dialog3').fadeIn();
+});
+$('#Close3').click(function() {
+  $('#Dialog3').hide();
+});
+$('#Next3').click(function() {
+  $('#Dialog3').hide();
+  $('#Dialog4').fadeIn();
+});
+   $('#Lehti4').click(function() {
+  $('#Dialog4').fadeIn();
+});
+$('#Close4').click(function() {
+  $('#Dialog4').hide();
+});
+  }
+</script>
+<style>
+#Lehti1, #Lehti2, #Lehti3, #Lehti4, #Next1, #Next2, #Next3, #Close1, #Close2, #Close3, #Close4 {
+  cursor: pointer;
+}
+#Next1, #Next2, #Next3, #Close1, #Close2, #Close3, #Close4 {
+  opacity: .7;  
+}
+#Next1:hover, #Next2:hover, #Next3:hover, #Close1:hover, #Close2:hover, #Close3:hover, #Close4:hover {
+  opacity: 1;  
+}
+#Lehti1:hover, #Lehti2:hover, #Lehti3:hover, #Lehti4:hover { 
+transform: scale(1.03); 
+}
+</style>
